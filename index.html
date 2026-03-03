@@ -552,6 +552,35 @@ footer{background:var(--off-black);border-top:1px solid var(--border);padding:56
   .stat-pill{padding:6px 10px;}
   .stat-v{font-size:14px;}
 }
+
+/* ─── ABOUT PAGE SPECIFIC ─── */
+.about-info-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;}
+.about-btns{display:flex;gap:12px;flex-wrap:wrap;}
+.about-h1{font-size:clamp(34px,5vw,60px)!important;}
+.page-wrap{padding-top:68px;}
+
+@media(max-width:768px){
+  .about-info-grid{grid-template-columns:1fr!important;gap:40px;}
+  .about-btns{flex-direction:column;gap:10px;}
+  .about-btns .btn-red,
+  .about-btns .btn-outline{width:100%;text-align:center;justify-content:center;display:flex;align-items:center;}
+  .about-h1{font-size:clamp(28px,8vw,42px)!important;}
+  .page-wrap{padding-top:60px;}
+  .tl-item{gap:12px;padding-left:18px;}
+  .tl-yr{font-size:12px;}
+  .tl-txt{font-size:12px;}
+  .ci-val{font-size:12.5px;word-break:break-word;}
+  .about-img{height:220px;}
+  /* fix inline style overrides on about section-dark inner grid */
+  #page-about .section-dark .sa-l,
+  #page-about .section-dark .sa-r{width:100%;}
+}
+
+@media(max-width:420px){
+  .about-h1{font-size:26px!important;}
+  .about-btns .btn-red,
+  .about-btns .btn-outline{font-size:12px;padding:12px 18px;}
+}
 </style>
 </head>
 <body>
@@ -724,7 +753,7 @@ footer{background:var(--off-black);border-top:1px solid var(--border);padding:56
 
 <!-- ═══ SHOE LAUNDRY ═══ -->
 <div id="page-laundry" class="page">
-<div style="padding-top:68px">
+<div class="page-wrap">
 <div class="page-hero">
   <div class="page-hero-bg"></div>
   <div class="sec-label sa">Shoe Laundry</div>
@@ -843,7 +872,7 @@ footer{background:var(--off-black);border-top:1px solid var(--border);padding:56
 
 <!-- ═══ SHOE REPAIR ═══ -->
 <div id="page-repair" class="page">
-<div style="padding-top:68px">
+<div class="page-wrap">
 <div class="page-hero">
   <div class="page-hero-bg"></div>
   <div class="sec-label sa">Repair Services</div>
@@ -966,7 +995,7 @@ footer{background:var(--off-black);border-top:1px solid var(--border);padding:56
 
 <!-- ═══ CUSTOM MAKING ═══ -->
 <div id="page-making" class="page">
-<div style="padding-top:68px">
+<div class="page-wrap">
 <div class="page-hero" style="background:linear-gradient(135deg,#12091f 0%,#1a0f2e 100%)">
   <div class="sec-label sa" style="color:#C084FC">Custom Making</div>
   <h1 class="sa d1" style="color:white">Bespoke <em style="color:#C084FC">Shoe Making</em></h1>
@@ -1010,15 +1039,15 @@ footer{background:var(--off-black);border-top:1px solid var(--border);padding:56
 
 <!-- ═══ ABOUT ═══ -->
 <div id="page-about" class="page">
-<div style="padding-top:68px">
+<div class="page-wrap">
 <section class="section">
   <div class="about-hero-grid">
     <div class="sa-l">
       <div class="sec-label">About Us</div>
-      <h1 class="sec-title" style="font-size:clamp(38px,5vw,64px)">The Story of <em>Mr. Boot</em></h1>
+      <h1 class="sec-title about-h1">The Story of <em>Mr. Boot</em></h1>
       <p style="font-size:14.5px;color:var(--text-sec);line-height:1.85;font-weight:300;margin-bottom:28px">Founded in 2009 by <strong style="color:var(--white)">Pankaj Suresh Sonawane</strong>, Mr. Boot Shoe Laundry and Repairing Services has been Pimpri-Chinchwad's most trusted shoe care destination for over 15 years.</p>
       <p style="font-size:14.5px;color:var(--text-sec);line-height:1.85;font-weight:300;margin-bottom:32px">What started as a small repair shop near DY Patil has grown into a comprehensive care studio — shoes, jackets, bags — all under one trusted roof.</p>
-      <div style="display:flex;gap:12px">
+      <div class="about-btns">
         <a href="https://wa.me/919028983659" class="btn-red">📱 WhatsApp Us</a>
         <a href="tel:09028983659" class="btn-outline">📞 Call Now</a>
       </div>
@@ -1031,7 +1060,7 @@ footer{background:var(--off-black);border-top:1px solid var(--border);padding:56
   </div>
 </section>
 <section class="section section-dark">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px">
+  <div class="about-info-grid">
     <div class="sa-l">
       <div class="sec-label">Our Journey</div>
       <h2 class="sec-title">15+ Years of <em>Excellence</em></h2>
